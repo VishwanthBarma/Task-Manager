@@ -7,10 +7,10 @@ type LayoutProps = {
 
 function Layout({ children }: LayoutProps) {
   return (
-    <>
-    <NavBar />
-    <main>{ children }</main>
-    </>
+    <div>
+      <NavBar />
+      <main>{ children }</main>
+    </div>
   )
 }
 
