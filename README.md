@@ -1,23 +1,25 @@
-# Next.js + Tailwind CSS Example
+# Task-Management-App
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## Task-Manager
 
-## Deploy your own
+### Fullstack App With TypeScript, PostgreSQL, Next.js, Prisma and GraphQL
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+1. Data Modeling
+2. GraphQl API
+3. Authentication
+4. Image upload
+5. Deployment
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+### The app is built using following technologies:
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-# or
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- **Next.js** as the REact framework
+- **Apollo Server** as the GraphQL server
+- **Nexus** for constructing the GraphQL schema
+- **Apollo Client** as the GraphQL client
+- **Prisma** as the ORM for migrations and database access
+- **PostgreSQL** as the database
+- **AWS S3** for uploading images
+- **Auth0** for authentication
+- **TypeScript** as the progamming language
+- **TailwindCSS** a utility-first CSS framework
+- **Vercel** for deployment
