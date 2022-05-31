@@ -12,7 +12,7 @@
 
 ### The app is built using following technologies:
 
-- **Next.js** as the REact framework
+- **Next.js** as the React framework
 - **Apollo Server** as the GraphQL server
 - **Nexus** for constructing the GraphQL schema
 - **Apollo Client** as the GraphQL client
