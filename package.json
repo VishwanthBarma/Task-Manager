@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start"
   },
+  "type": "module",
   "dependencies": {
     "@headlessui/react": "^1.6.4",
     "@prisma/client": "^3.14.0",

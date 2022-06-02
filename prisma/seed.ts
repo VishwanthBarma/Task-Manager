@@ -3,14 +3,21 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
-    await prisma.user.create({
+    await prisma.note.create({
         data: {
-            email: 'vishwanthbarma@gmail.com',
-            name: 'BarmaVishwanth',
-            username: 'barmavishwanth',
-            image: 'https://avatars.githubusercontent.com/u/72876374?v=4'
+            userId: 1,
+            content : "My first note",
+            tag: "STARTED"
         }
     })
+    // await prisma.user.create({
+    //     data: {
+    //         email: "akashKadari@gmail.com",
+    //         name: "Akash Kadari",
+    //         username: "kadariakash",
+    //         image: "noimage",
+    //     }
+    // })
 }
 
 main()

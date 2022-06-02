@@ -24,8 +24,9 @@ model Note {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   userId    Int
-  user      User     @relation(fields: [userId], references: [id])
+  // user      User     @relation(fields: [userId], references: [id])
 
+  user       User        @relation(fields: [userId], references: [id])
   content    String
   tag        Tag         @default(STARTED)
   detailNote DetailNote?
@@ -34,6 +35,7 @@ model Note {
 model DetailNote {
   id            Int    @id @default(autoincrement())
   noteId        Int    @unique
+  // note          Note   @relation(fields: [noteId], references: [id])
   note          Note   @relation(fields: [noteId], references: [id])
   detailContent String
 }
