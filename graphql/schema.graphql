@@ -2,6 +2,38 @@
 ### Do not make changes to this file directly
 
 
+type DetailNote {
+  detailContent: String
+  id: Int
+  note: Note
+  noteId: Int
+}
+
+type Note {
+  content: String
+  detailNote: DetailNote
+  id: Int
+  tag: Tag
+  user: User
+  userId: Int
+}
+
 type Query {
-  ok: Boolean!
+  notes: [Note]
+}
+
+enum Tag {
+  COMPLETED
+  INPROGRESS
+  PENDING
+  STARTED
+}
+
+type User {
+  email: String
+  id: Int
+  image: String
+  name: String
+  notes: [Note]
+  username: String
 }
