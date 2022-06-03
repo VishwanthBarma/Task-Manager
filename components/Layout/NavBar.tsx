@@ -25,7 +25,7 @@ function NavBar() {
             src={"https://avatars.githubusercontent.com/u/72876374?v=4"}
             layout='fill'
             objectFit='cover'
-            className='absolute rounded-full'
+            className='absolute rounded-l-md'
           />
         </div>
         <div className='text-black dark:text-white flex-col justify-center hidden sm:flex'>

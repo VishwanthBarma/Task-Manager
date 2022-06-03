@@ -10,6 +10,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@apollo/client": "^3.6.6",
     "@headlessui/react": "^1.6.4",
     "@prisma/client": "^3.14.0",
     "apollo-server-micro": "^3.8.1",
