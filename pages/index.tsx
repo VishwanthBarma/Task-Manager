@@ -16,7 +16,6 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="p-3 lg:px-32">
-        <h1 className='font-bold text-4xl dark:text-sky-500 text-orange-500'>Tasks</h1>
         <Notes />
       </div>
     
