@@ -19,14 +19,14 @@ const Tag = enumType({
     members: ['STARTED', 'INPROGRESS', 'PENDING', 'COMPLETED'],
 })
 
-// export const NotesQuery = extendType({
-//     type: 'Query',
-//     definition(t) {
-//         t.list.field('notes', {
-//             type: Note,
-//             resolve(_parent, _args, ctx){
-//                 return ctx.prisma.note.findMany()
-//             },
-//         })
-//     },
-// })
+export const NotesQuery = extendType({
+    type: 'Query',
+    definition(t) {
+        t.list.field('notes', {
+            type: Note,
+            resolve(_parent, _args, ctx){
+                return ctx.prisma.note.findMany()
+            },
+        })
+    },
+})
