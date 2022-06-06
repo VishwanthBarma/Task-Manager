@@ -68,7 +68,7 @@ function NavBar() {
         <div onClick={changeTheme} className='h-full hidden sm:flex items-center justify-center p-3 cursor-pointer'>
           {
             theme == 'dark' ? (
-              <MdDarkMode className='h-6 w-6 dark:text-white hover:text-sky-500'/>
+              <MdDarkMode className='h-6 w-6 dark:text-white hover:dark:text-sky-500'/>
             ):(
               <MdOutlineDarkMode className='h-6 w-6 hover:text-sky-500'/>
             )
