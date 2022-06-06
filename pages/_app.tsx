@@ -4,16 +4,19 @@ import { ThemeProvider } from 'next-themes';
 import Layout from '../components/Layout/Layout';
 import apolloClient from '../lib/apollo';
 import { ApolloProvider } from '@apollo/client';
+import { UserProvider } from '@auth0/nextjs-auth0';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return(
-    <ApolloProvider client={apolloClient}>
-      <ThemeProvider enableSystem={true} attribute='class'>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
-    </ApolloProvider>
+    <UserProvider>
+      <ApolloProvider client={apolloClient}>
+        <ThemeProvider enableSystem={true} attribute='class'>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
+      </ApolloProvider>
+    </UserProvider>
   ) 
 }
 

@@ -8,8 +8,12 @@
     "build": "next build",
     "start": "next start"
   },
+  "resolutions": {
+    "superagent-proxy": "^2.1.0"
+  },
   "dependencies": {
     "@apollo/client": "^3.6.6",
+    "@auth0/nextjs-auth0": "^1.9.0",
     "@headlessui/react": "^1.6.4",
     "@prisma/client": "^3.14.0",
     "apollo-server-micro": "^3.8.1",
