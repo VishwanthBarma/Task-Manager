@@ -4,7 +4,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { email, secret } = req.body;
-
   if (req.method !== 'POST') {
     return res.status(403).json({ message: 'Method not allowed' });
   }

@@ -13,6 +13,8 @@ function NavBar() {
   const [enabled, setEnabled] = useState(false);
   const {theme, setTheme} = useTheme();
 
+  console.log(user);
+
   const changeTheme = () => {
     enabled ? setEnabled(false) : setEnabled(true);
     theme === 'light' ? setTheme('dark') : setTheme('light');
@@ -28,16 +30,11 @@ function NavBar() {
             <>
             <div className='w-16 h-full relative'>
               {/* Image */}
-              <Image
-                src={"https://avatars.githubusercontent.com/u/72876374?v=4"}
-                layout='fill'
-                objectFit='cover'
-                className='absolute rounded-l-md'
-              />
+              <img src={user?.picture} className='object-cover w-16 h-full'></img>
             </div>
             <div className='text-black dark:text-white flex-col justify-center hidden sm:flex'>
-              <h1 className='font-bold'>FullName</h1>
-              <h1 className='text-slate-400 text-sm'>@Username</h1>
+              <h1 className='font-bold'>{user?.nickname}</h1>
+              <h1 className='text-slate-400 text-[12px]'>{user?.name}</h1>
             </div>
             </>
           ): (
@@ -65,7 +62,7 @@ function NavBar() {
           <IoSettingsSharp className='h-6 w-6 dark:text-white hover:rotate-45 duration-200'/>
         </div>
         {/* dark mode */}
-        <div onClick={changeTheme} className='h-full hidden sm:flex items-center justify-center p-3 cursor-pointer'>
+        <div onClick={changeTheme} className='h-full hidden sm:flex items-center justify-center p-3 text-white cursor-pointer'>
           {
             theme == 'dark' ? (
               <MdDarkMode className='h-6 w-6 dark:text-white hover:dark:text-sky-500'/>
