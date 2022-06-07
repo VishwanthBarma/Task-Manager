@@ -13,8 +13,6 @@ function NavBar() {
   const [enabled, setEnabled] = useState(false);
   const {theme, setTheme} = useTheme();
 
-  console.log(user);
-
   const changeTheme = () => {
     enabled ? setEnabled(false) : setEnabled(true);
     theme === 'light' ? setTheme('dark') : setTheme('light');
@@ -30,7 +28,7 @@ function NavBar() {
             <>
             <div className='w-16 h-full relative'>
               {/* Image */}
-              <img src={user?.picture} className='object-cover w-16 h-full'></img>
+              <img src={user?.picture} className='object-cover w-16 h-full rounded-l-md'></img>
             </div>
             <div className='text-black dark:text-white flex-col justify-center hidden sm:flex'>
               <h1 className='font-bold'>{user?.nickname}</h1>
